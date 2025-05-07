@@ -55,29 +55,12 @@ int main()
     printf("String before reverse : %s\n", s);
     
     int length = strlen(s);
-    char temp[5] = "";
-    int lengthOfTemp = 0;
     int i = length -1;
 
     for(i; i >= 0; i--)
     {
-        if(s[i] != ' ')
-        {
-            // add to array
-            temp[lengthOfTemp] = s[i];
-            lengthOfTemp++;
-        }
-        else {
-            strrev(temp);
-            printf("%s", temp);
-            memset(temp, '\0', sizeof(temp)); 
-            lengthOfTemp = 0;
-            
-
-            if (i != 0)
-            {
-                printf(" ");
-            }
-        }
+        printf("%c", s[i]);
     }
+    
+    return 0;
 }
